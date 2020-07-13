@@ -1,17 +1,9 @@
-### Very bare bones typescript react bootstrap
+## Personal website to host my portfolio & resume
 
-Built on [Create React App](https://github.com/facebook/create-react-app).
+View Live & `http://eric-robertson.work/`
 
-Implements:
-- Typescript
 
-Use:
-```
-    npm i
-    npm run start
-```
+### structure
 
-Build:
-```
-    npm run build
-```
+The whole site is built from the data in `src/sitedata.ts` 
+If anyone wants to fork this with their own data, go ahead!

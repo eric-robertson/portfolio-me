@@ -10,13 +10,11 @@ interface Props { project: {
 	text : string, 
 	fullText : string, 
 	date : string, 
-	id : string, 
 	tags : string[],
-	references : { name : string, email : string, title : string }[],
 	link : string
 }}
 
-
+/*
 export function referencesPanel ( references : { name : string, email : string, title : string }[]) {
 	
 	if (references.length == 0 ) return <></>
@@ -43,7 +41,7 @@ export function referencesPanel ( references : { name : string, email : string, 
 			}
 		</Box>
 	</>
-}
+}*/
 
 
 export function projectAtAGlance ( props : Props) {
@@ -52,7 +50,7 @@ export function projectAtAGlance ( props : Props) {
 	return <>
 		<Text color="text" fontSize={[1]} marginLeft="20px" >{ 'Project At A Glance' }</Text>
 		<Box style={{position: 'relative', padding: 20, width: '100%', minHeight: 230 }} bg="backgroundActive" color="text"  className="drop">
-			<img src={p.img} width='150px' style={{borderRadius: 5, position: 'absolute'}} />
+			<img src={p.img} width='150px' style={{borderRadius: 5, position: 'absolute', maxHeight: 150 }} />
 			{
 				props.project.link === '' 
 				? <></>
@@ -93,7 +91,7 @@ export default function ProjectPanel ( props : Props ) {
 
 	return <div>
 		{ projectAtAGlance( props ) }
-		{ referencesPanel( props.project.references ) }
+		{ /* referencesPanel( props.project.references ) */ }
 	</div>
 
 }

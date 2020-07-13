@@ -2,15 +2,15 @@ import React, { Component  } from 'react';
 import { Flex,Text,Box,Image } from 'rebass'
 import * as NavigationState from '../statestore/NavigationState'
 
-interface Project { img : string, name: string, text : string, date : string, id : string, tags : string[] }
+interface Project { img : string, name: string, text : string, date : string, tags : string[] }
 interface Props { projects : Project[], filterTag : string  }
 
 function projectPanel ( item : Project, key : number ) {
-	return <div style={{position: 'relative', width: '100%', marginTop: 20, cursor: 'pointer' }} onClick={ () => NavigationState.gotoNavOption(`View/${item.id}`)} key={key}>
-		<Text color="text" fontSize={[1]} marginLeft="20px" >{ item.id }</Text>
+	return <div style={{position: 'relative', width: '100%', marginTop: 20, cursor: 'pointer' }} onClick={ () => NavigationState.gotoNavOption(`View/${item.name.toLocaleLowerCase().split(' ').join('-')}`)} key={key}>
+		<Text color="text" fontSize={[1]} marginLeft="20px" >{ item.name.toLocaleLowerCase().split(' ').join('-') }</Text>
 		
 		<Box style={{position: 'relative', padding: 20, width: '100%', borderRadius: 5, height: 190 }} bg="backgroundActive" className="drop">
-			<img src={item.img} width='150px' style={{borderRadius: 5, position: 'absolute'}} />
+			<img src={item.img} width='150px'  style={{borderRadius: 5, position: 'absolute', maxHeight: 150 }} />
 			<div style={{marginLeft: 170}}>
 				<Text color='textActive' fontSize={[4]} marginBottom='10px'> {item.name} </Text>
 				<Text color='text'> {item.text} </Text>

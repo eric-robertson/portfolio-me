@@ -42,7 +42,7 @@ export default class extends Component<{},{}>  {
 
 				</>
 
-			case 'Acomplishments':
+			case 'Education':
 				return <>
 					<Education 
 						education={ data.acomplishments }
@@ -59,7 +59,7 @@ export default class extends Component<{},{}>  {
 			case 'View':
 				return <>
 					<ProjectPanel
-						project={ data.projects.filter( p => p.id === NavigationState.getNavSubOption() )[0] } 
+						project={ data.projects.filter( p => p.name.toLocaleLowerCase().split(' ').join('-') === NavigationState.getNavSubOption() )[0] } 
 					/>
 				</>
 
@@ -73,7 +73,7 @@ export default class extends Component<{},{}>  {
 					<NavBar 
 						name={ data.name }
 						title={ data.title }
-						options={['About', 'Projects', 'Acomplishments', 'Social']} />
+						options={['About', 'Projects', 'Education', 'Social']} />
 						
 					<Box style={{ width: 900, marginLeft: 'calc(50% - 400px)' , paddingTop: 20 }}>
 						{ this.getPageContent( NavigationState.getNavOption() ) }
