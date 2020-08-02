@@ -15,6 +15,16 @@ export default {
 	`,
 	projects: [
 		{
+			name : "Firefly Framework",
+			text: "A stupidly simple framework for making mobile applications in a fast and rapid-prototyping minimalist way. Easy and simple for tiny projects to finish quickly.",
+			fullText: "Currently be used for a bunch of tiny apps on the app store. I made this because I really like minimalist apps and it was hard to make them with the built in flutter styles. This framework is super-plug and play and makes exceptionaly clean apps.",
+			tags: ["flutter", "mobile" ] ,
+			img: "/images/firefly.png",
+			date: "2020-08-1",
+			link: "https://github.com/eric-robertson/firefly"
+
+		},
+		{
 			name : "Website Portfolio",
 			text: "The very website you are viewing right now, writen so I could have a unified place to point people to logging all my projects. Github doesnt have the exact features I wanted.",
 			fullText: "Specificily I wanted the feature to filter projects by tags, which github does not allow you do. In addion, there are projects I have worked on that are not visable on my github profile, so this website will hopefuly be a good spot for a more whole view of my portfolio.",
@@ -98,7 +108,7 @@ export default {
 			name : "Easy Shopping Flutter APP",
 			text: "Application ment to make shopping easier for family. Allows saving a shared list across multiple devices and sorting items by location in the store and in the house.",
 			fullText: "Makes shopping easier by giving you an ordered list of items by their location. Each item is gotten on the first try without need for backtracking, items are not forgotten or mis-remembered. List is saved to the cloud and app is available on the play store! Uses AWS lambda, cognito, and dynamodb for a true scaleable serverless application.",
-			tags: [ "digital-ocean", "flutter", "serverless", "dynamodb"] ,
+			tags: [ "mobile", "flutter", "serverless", "dynamodb"] ,
 			img: "/images/grocery.jpg",
 			date: "2020-07-01",
 			link: "https://github.com/erobertson-misc/grocery-app"
@@ -124,12 +134,6 @@ export default {
 			link: "https://github.com/erobertson-misc/omni-parser"
 
 		}
-
-		
-
-		
-
-		
 		
 	],
 	acomplishments : [
